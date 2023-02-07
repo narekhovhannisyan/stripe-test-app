@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from 'express'
 
 import CONFIG from '../config'
 
-import { ErrorCases, MiddlewareError } from '../types/middleware/error-handler'
+import { ErrorCases, MiddlewareError } from '../typings/middleware/error-handler'
 
 const { RETRY_AFTER_HEADER } = CONFIG
 
