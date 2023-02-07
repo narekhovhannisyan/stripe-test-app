@@ -18,4 +18,4 @@
 | `SESSION_SECRET`              | Session secret                   | `secret`                               |
 | `VERIFICATION_EXPIRE`         | Verification id expiration       | `60 * 10 // 10 minutes`                |
 
-*[⬅️ back to the root](/README.md#express-ts-app-boilerplate)*
+*[⬅️ back to the root](/README.md#stripe-test-app)*

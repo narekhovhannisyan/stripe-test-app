@@ -10,4 +10,4 @@
 
  * [<API-NAME-HERE>](./api/*.md)
 
-*[⬅️ back to the root](/README.md#express-ts-app-boilerplate)*
+*[⬅️ back to the root](/README.md#stripe-test-app)*
