@@ -1,0 +1,64 @@
+{
+  "name": "express-ts-app-boilerplate",
+  "description": "express-ts-app-boilerplate application.",
+  "version": "0.0.0",
+  "author": {
+    "name": "Narek Hovhannisyan",
+    "email": "narekgilmour@gmail.com",
+    "url": "https://github.com/narekhovhannisyan"
+  },
+  "bugs": {
+    "url": "https://github.com/narekhovhannisyan/express-ts-app-boilerplate/issues"
+  },
+  "contributors": [
+    {
+      "name": "Narek Hovhannisyan",
+      "email": "narekgilmour@gmail.com",
+      "url": "https://github.com/narekhovhannisyan"
+    }
+  ],
+  "dependencies": {
+    "app-root-path": "3.1.0",
+    "dotenv": "16.0.3",
+    "cors": "2.8.5",
+    "express": "4.18.2",
+    "helmet": "6.0.0",
+    "morgan": "1.10.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "1.0.3",
+    "@types/app-root-path": "1.2.4",
+    "@types/cors": "2.8.12",
+    "@types/express": "4.17.14",
+    "@types/morgan": "1.9.3",
+    "@types/node": "18.11.5",
+    "@typescript-eslint/eslint-plugin": "5.41.0",
+    "@typescript-eslint/parser": "5.41.0",
+    "eslint": "8.26.0",
+    "ts-node": "10.9.1",
+    "typescript": "4.8.4"
+  },
+  "engines": {
+    "node": "18.12.0",
+    "npm": "8.19.2"
+  },
+  "homepage": "https://github.com/narekhovhannisyan/express-ts-app-boilerplate#readme",
+  "keywords": [
+    "application",
+    "backend",
+    "express"
+  ],
+  "main": "src/bin/www.ts",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/narekhovhannisyan/express-ts-app-boilerplate"
+  },
+  "scripts": {
+    "build": "tsc",
+    "fix-package": "fixpack",
+    "lint": "./node_modules/.bin/eslint ./src --fix",
+    "start": "node dist/bin/www",
+    "start-dev": "npx ts-node src/bin/www"
+  }
+}
