@@ -1,10 +1,11 @@
-# express-ts-app-boilerplate
+# stripe-test-app
 
-Server side application for express-ts-app-boilerplate.
+Server side application for stripe-test-app.
 
  # Table of Contents
 
 * [API Endpoints](doc/API_ENDPOINTS.md)
+* [Webhooks](doc/WEBHOOKS.md)
 * [Contributing](doc/CONTRIBUTING.md)
 * [Development](doc/DEVELOPMENT.md)
   * [Environment Variables](doc/DEVELOPMENT.md#environment-variables)
