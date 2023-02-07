@@ -1,7 +1,3 @@
-type PaymentStatuses = {
-  [key: string]: number
-}
-
 export default {
   MODE: process.env.MODE || 'development',
   PORT: process.env.PORT && parseInt(process.env.PORT) || 3010,
