@@ -1,14 +1,14 @@
 {
-  "name": "express-ts-app-boilerplate",
-  "description": "express-ts-app-boilerplate application.",
+  "name": "stripe-test-app",
+  "description": "stripe-test-app",
   "version": "0.0.0",
   "author": {
     "name": "Narek Hovhannisyan",
     "email": "narekgilmour@gmail.com",
-    "url": "https://github.com/narekhovhannisyan"
+    "url": "https://github.com/narekhovhannisyan/stripe-test-app"
   },
   "bugs": {
-    "url": "https://github.com/narekhovhannisyan/express-ts-app-boilerplate/issues"
+    "url": "https://github.com/narekhovhannisyan/stripe-test-app/issues"
   },
   "contributors": [
     {
@@ -23,7 +23,8 @@
     "cors": "2.8.5",
     "express": "4.18.2",
     "helmet": "6.0.0",
-    "morgan": "1.10.0"
+    "morgan": "1.10.0",
+    "stripe": "11.9.1"
   },
   "devDependencies": {
     "@tsconfig/node16": "1.0.3",
@@ -39,10 +40,10 @@
     "typescript": "4.8.4"
   },
   "engines": {
-    "node": "18.12.0",
+    "node": "18.12.1",
     "npm": "8.19.2"
   },
-  "homepage": "https://github.com/narekhovhannisyan/express-ts-app-boilerplate#readme",
+  "homepage": "https://github.com/narekhovhannisyan/stripe-test-app#readme",
   "keywords": [
     "application",
     "backend",
@@ -52,7 +53,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/narekhovhannisyan/express-ts-app-boilerplate"
+    "url": "https://github.com/narekhovhannisyan/stripe-test-app"
   },
   "scripts": {
     "build": "tsc",
