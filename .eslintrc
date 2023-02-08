@@ -60,12 +60,6 @@
         "patterns": [
           {
             "group": [
-              "src/"
-            ],
-            "message": "Please use relative path only."
-          },
-          {
-            "group": [
               "dist/",
               "/dist/",
               "*/dist"
