@@ -1,1 +1,1 @@
-export { Users } from './users.definition'
+export { Subscriptions } from './subscriptions.definition'

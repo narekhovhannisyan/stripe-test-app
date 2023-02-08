@@ -24,6 +24,7 @@
     "jest": false
   },
   "rules": {
+    "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/interface-name-prefix": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "warn",
@@ -57,12 +58,6 @@
       "error",
       {
         "patterns": [
-          {
-            "group": [
-              "src/"
-            ],
-            "message": "Please use relative path only."
-          },
           {
             "group": [
               "dist/",

@@ -3,6 +3,8 @@ import helmet from 'helmet'
 import morgan from 'morgan'
 
 import ApiHealth from './api/health'
+import ApiV1 from './api/v1'
+import Webhook from './webhook'
 
 import {
   ErrorHandlerMiddleware,
@@ -30,6 +32,11 @@ app.use(morgan('dev'))
 app.disable('x-powered-by')
 
 /**
+ * Initialize Webhook endpoints.
+ */
+app.use('/webhook', Webhook)
+
+/**
  * Middleware - body parser:
  * Parses the text as URL encoded data (limit 5 mb).
  * Parses the text as JSON & exposes the resulting object on req.body (limit 5 mb).
@@ -47,6 +54,11 @@ app.use(helmet())
  * Initialize API Health endpoint.
  */
 app.use('/health', ApiHealth)
+
+/**
+ * Initialize API v1 endpoints.
+ */
+app.use('/api/v1', ApiV1)
 
 /**
  * Handle favicon request.

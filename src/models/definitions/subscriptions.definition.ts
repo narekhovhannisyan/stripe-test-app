@@ -2,10 +2,10 @@ import { DataTypes, ModelDefined } from 'sequelize'
 
 import { SequelizeClient } from '../../storages'
 
-import { UsersAttributes, UsersCreationAttributes } from '../../typings/models/users'
+import { SubscriptionsAttributes, SubscriptionsCreationAttributes } from '../../typings/models/subscriptions'
 
-export const Users: ModelDefined<UsersAttributes, UsersCreationAttributes>= SequelizeClient.define(
-  'users',
+export const Subscriptions: ModelDefined<SubscriptionsAttributes, SubscriptionsCreationAttributes>= SequelizeClient.define(
+  'subscriptions',
   {
     id: {
       type: DataTypes.INTEGER,
@@ -13,7 +13,7 @@ export const Users: ModelDefined<UsersAttributes, UsersCreationAttributes>= Sequ
       autoIncrement: true,
       primaryKey: true
     },
-    email: {
+    customerEmail: {
       type: DataTypes.STRING(200),
       allowNull: true
     },
@@ -27,7 +27,8 @@ export const Users: ModelDefined<UsersAttributes, UsersCreationAttributes>= Sequ
     }
   },
   {
-    tableName: 'users',
+    tableName: 'subscriptions',
+    timestamps: false,
     underscored: true
   }
 )
