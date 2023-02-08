@@ -1,10 +1,6 @@
 import { Subscriptions } from './definitions'
 
-type CreateRecordParams = {
-  subscriptionPlanName: string,
-  subscriptionPlanPrice: number,
-  email: string
-}
+import { CreateRecordParams } from '../typings/models/subscriptions'
 
 /**
  * Creates subscription record.
