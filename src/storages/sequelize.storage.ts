@@ -14,14 +14,9 @@ const logger = ConnectionLogger(SERVICE_NAME)
  */
 const OPTIONS: Options = {
   logging: false,
-  dialect: 'postgres',
+  dialect: 'mysql',
   dialectOptions: {
-    useUTC: false,
-    multipleStatements: true,
-    ssl: {
-      require: true,
-      rejectUnauthorized: false
-    }
+    multipleStatements: true
   }
 }
 
