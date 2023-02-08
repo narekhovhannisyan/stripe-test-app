@@ -53,16 +53,21 @@ export const getCustomerData = (id: string) => stripe.customers.retrieve(id)
 export const createSubscription = (customerId: string, items: any[]) => stripe.subscriptions.create({ customer: customerId, items })
 
 /**
- * _____________________ TASK 2 _____________________
+ * Gets from string Date format, then converts to seconds.
  */
+const getEpochSecondsFromDate = (date: string) => {
+  const dateFormat = new Date(date)
+
+  return Math.floor(dateFormat.getTime() / 1000)
+}
 
 /**
  * Gets invoices between `dateStart` and `dateEnd`.
  */
 const getInvoices = (dateStart: string, dateEnd: string) => {
-  const milliStart = new Date(dateStart)
-  const milliEnd = new Date(dateEnd)
-  const query = `created>${milliStart.getDate()} AND created<${milliEnd.getDate()}`
+  const startInSeconds = getEpochSecondsFromDate(dateStart)
+  const endInSeconds = getEpochSecondsFromDate(dateEnd)
+  const query = `created>=${startInSeconds} AND created<=${endInSeconds}`
 
   return stripe.invoices.search({ query })
 }
@@ -80,11 +85,11 @@ const payInvoices = (invoices: string[]) => Bluebird.map(invoices, payInvoice)
 /**
  * Pays invoices from `dateStart` to `dateEnd`.
  */
-const payInvoicesFrom = (dateStart: string, dateEnd: string) => getInvoices(dateStart, dateEnd)
+export const payInvoicesFrom = (dateStart: string, dateEnd: string) => getInvoices(dateStart, dateEnd)
   .then((response) => {
-    const invoiceIds = response.data.map((invoice) => invoice.id)
+    const invoiceIds = response.data
+      .filter((invoice) => invoice.status === 'open')
+      .map((invoice) => invoice.id)
 
     return payInvoices(invoiceIds)
   })
-
-// payInvoicesFrom('2019-01-01', '2022-01-01')
