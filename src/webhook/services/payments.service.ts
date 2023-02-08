@@ -2,6 +2,8 @@ import { Request, Response } from 'express'
 
 import { SubscriptionsModel } from '../../models'
 
+import { getCustomerData } from '../../libs/stripe.lib'
+
 import CONFIG from '../../config'
 
 const { STRIPE } = CONFIG
@@ -15,17 +17,19 @@ const { SUBSCRIPTION_CREATED } = WEBHOOK_STATUSES
 export const stripeWebhook = (request: Request, response: Response) => {
   const event = request.body
 
-  event.data.object.customer_email
-
   if (event.type === SUBSCRIPTION_CREATED) {
-    const { customer_email, plan } = event.data.object
+    // console.log(event.data.object)
+    const { customer, plan } = event.data.object
     const { amount, nickname } = plan
 
-    SubscriptionsModel.create({
-      email: customer_email,
-      subscriptionPlanName: nickname,
-      subscriptionPlanPrice: amount
-    })
+    getCustomerData(customer)
+      // @ts-ignore since wrong type declaration derrived from stripe
+      .then((customerData) => customerData.email)
+      .then((customerEmail) => SubscriptionsModel.create({
+        customerEmail,
+        subscriptionPlanName: nickname,
+        subscriptionPlanPrice: amount
+      }))
       .catch(console.error)
   }
 
