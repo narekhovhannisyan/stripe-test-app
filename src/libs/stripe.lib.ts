@@ -40,3 +40,8 @@ export const constructEvent = (params: ConstructEventParams) => {
     endpointSecret
   )
 }
+
+/**
+ * Get customer information based on `id`.
+ */
+export const getCustomerData = (id: string) => stripe.customers.retrieve(id)
