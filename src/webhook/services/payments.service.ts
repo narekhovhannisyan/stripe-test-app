@@ -18,9 +18,8 @@ export const stripeWebhook = (request: Request, response: Response) => {
   const event = request.body
 
   if (event.type === SUBSCRIPTION_CREATED) {
-    // console.log(event.data.object)
     const { customer, plan } = event.data.object
-    const { amount, nickname } = plan
+    const { amount, nickname } = plan // since there is no name parameter nickname was selected instead
 
     getCustomerData(customer)
       // @ts-ignore since wrong type declaration derrived from stripe
