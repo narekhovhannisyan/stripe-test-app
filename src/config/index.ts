@@ -13,7 +13,10 @@ export default {
     PUBLISHABLE_KEY: process.env.STRIPE_PUBLISHABLE_KEY || '',
     SECRET_KEY: process.env.STRIPE_SECRET_KEY || '',
     WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET || '',
-    API_VERSION: '2022-11-15' as const
+    API_VERSION: '2022-11-15' as const,
+    WEBHOOK_STATUSES: {
+      SUBSCRIPTION_CREATED: 'customer.subscription.created'
+    }
   },
   SERVICES: {
     STRIPE: 'Stripe',
