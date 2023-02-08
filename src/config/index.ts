@@ -1,5 +1,6 @@
 export default {
   DATABASE_URL: process.env.DATABASE_URL || '',
+  HOST: 'http://127.0.0.1:3010/api/v1',
   MODE: process.env.MODE || 'development',
   PORT: process.env.PORT && parseInt(process.env.PORT) || 3010,
   REQUIRED_VARIABLES: [
