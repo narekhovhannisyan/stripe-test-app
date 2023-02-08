@@ -22,5 +22,15 @@ export default {
   SERVICES: {
     STRIPE: 'Stripe',
     SEQUELIZE: 'Sequelize'
+  },
+  VALIDATIONS: {
+    DEFAULT_OPTIONS: {
+      abortEarly: true,
+      allowUnknown: false,
+      convert: true
+    },
+    DB_MAX_INTEGER_VALUE: 21474836,
+    DB_MAX_STRING_VALUE: 250,
+    DB_MAX_TEXT_VALUE: 400
   }
 }
