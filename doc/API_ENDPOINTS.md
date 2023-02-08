@@ -4,10 +4,10 @@
 
 ### Health
 
- * [Health](./api/HEALTH.md)
+ * [Health](./api/health/HEALTH.md)
 
 ### V1
 
- * [<API-NAME-HERE>](./api/*.md)
+ * [Subscriptions](./api/v1/SUBSCRIPTIONS.md)
 
 *[⬅️ back to the root](/README.md#stripe-test-app)*
