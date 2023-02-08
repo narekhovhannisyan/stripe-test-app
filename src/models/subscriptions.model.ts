@@ -15,6 +15,6 @@ export const getByEmail = (email: string) => {
     where: { customerEmail: email }
   }
 
-  return Subscriptions.findOne(withCriteria)
-    .then((response) => response?.get())
+  return Subscriptions.findAll(withCriteria)
+    .then((responses) => responses.map((response) => response.get()))
 }
