@@ -4,18 +4,21 @@
 
  Required Environment Variables.
 
-| Variable name | Description |
-| ------------- | ----------- |
-| `*`           | *           |
+| Variable name            | Description                   |
+| ------------------------ | ----------------------------- |
+| `DATABASE_URL`           | MYSQL database connection url |
+| `STRIPE_PUBLISHABLE_KEY` | Stripe publishable key        |
+| `STRIPE_SECRET_KEY`      | Stripe secret key             |
+| `STRIPE_WEBHOOK_SECRET`  | Stripe webhook secret         |
 
  Optional Environment Variables.
 
-| Variable name                 | Description                      | Default                                |
-| ----------------------------- | -------------------------------- | -------------------------------------- |
-| `MODE`                        | Node environment                 | `development`                          |
-| `PORT`                        | Server port                      | `3010`                                 |
-| `RETRY_AFTER_HEADER`          | Retry after header for 503 error | `2 * 60 * 60`                          |
-| `SESSION_SECRET`              | Session secret                   | `secret`                               |
-| `VERIFICATION_EXPIRE`         | Verification id expiration       | `60 * 10 // 10 minutes`                |
+| Variable name         | Description                      | Default                 |
+| --------------------- | -------------------------------- | ----------------------- |
+| `MODE`                | Node environment                 | `development`           |
+| `PORT`                | Server port                      | `3010`                  |
+| `RETRY_AFTER_HEADER`  | Retry after header for 503 error | `2 * 60 * 60`           |
+| `SESSION_SECRET`      | Session secret                   | `secret`                |
+| `VERIFICATION_EXPIRE` | Verification id expiration       | `60 * 10 // 10 minutes` |
 
 *[⬅️ back to the root](/README.md#stripe-test-app)*
